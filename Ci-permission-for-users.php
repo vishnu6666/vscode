@@ -34,11 +34,10 @@ public function get_module_access($user_type)
                         "module" => trim($menu_value["module_name"]),
                         "menu_image" => trim($menu_value["menu_image"]));
                 }
-
                 
                 $permited_modules[] = trim($menu_value["module_name"]);
             }
-            //echo "<pre> Hi";print_r($menu_list);exit;
+            //echo "<pre> this is not ok Hi";print_r($menu_list);exit;
             $this->CI->session->set_userdata('permited_modules', serialize($permited_modules));
             $this->CI->session->set_userdata('menuinfo', serialize($menu_list));
             return true;
